@@ -51,11 +51,14 @@ import { nanoid } from 'nanoid';
   // };
 
   const handleChange = event => {
-    setName({ name: event.target.value });
+    
+    setName(event.target.value);
+    
   };
 
   const handleChangeNumber = event => {
-    setNumber({ number: event.target.value });
+    
+    setNumber(event.target.value);
   };
 
   const handleSubmit = event => {
@@ -105,6 +108,8 @@ const newContact =  { id: nanoid(), name: name, number: number }
           handleSubmit={handleSubmit}
           nameInputId={nameInputId}
           handleChange={handleChange}
+          name = {name}
+          number={number}
           handleChangeNumber={handleChangeNumber}
           handleChangeFilter={handleChangeFilter}
         ></ContactForm>
